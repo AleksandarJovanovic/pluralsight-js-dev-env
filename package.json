@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
-    "prestart": "npm-run-all b1 b2",
+    "prestart": "npm-run-all b1 b3",
     "b1": "babel-node buildScripts/startMessage.js",
-    "b2": "babel-node src/index.js",
+    "b3": "babel-node webpack.config.dev.js",
     "start": "babel-node buildScripts/srcServer.js"
   },
   "author": "Cory House",
@@ -17,6 +17,7 @@
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.5",
+    "babel-plugin-css-modules-transform": "^1.6.1",
     "babel-preset-latest": "6.16.0",
     "babel-register": "6.16.3",
     "chai": "3.5.0",

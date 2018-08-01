@@ -6,20 +6,18 @@ import open from 'open';
 // var open = require('open');
 
 
-
-
-// var webpack = require('webpack');
-// var config = require('../webpack.config.dev');
+import webpack from 'webpack';
+import config from '../webpack.config.dev';
 
 
 const port = 3000;
 const app = express();
-// const compiler = webpack(config);
+const compiler = webpack(config);
 
-// app.use(require('webpack-dev-middleware')(compiler, {
-//     noInfo: true,
-//     publicPath: config.output.publicPath
-// }));
+app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+}));
 
 
 app.get('/', function(req, res){

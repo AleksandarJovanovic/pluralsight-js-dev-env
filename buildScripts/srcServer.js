@@ -1,13 +1,19 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+import express from 'express';
+import { join } from 'path';
+import open from 'open';
+// var express = require('express');
+// var path = require('path');
+// var open = require('open');
+
+
+
 
 // var webpack = require('webpack');
 // var config = require('../webpack.config.dev');
 
 
-var port = 3000;
-var app = express();
+const port = 3000;
+const app = express();
 // const compiler = webpack(config);
 
 // app.use(require('webpack-dev-middleware')(compiler, {
@@ -17,7 +23,7 @@ var app = express();
 
 
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '../src/index.html'));
+    res.sendFile(join(__dirname, '../src/index.html'));
 });
 
 app.listen(port, function(err){
